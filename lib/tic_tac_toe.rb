@@ -119,7 +119,7 @@ class TicTacToe
   end  
   
   def play
-    while full? == false
+    while over? == false
       turn
       if won?
         puts "Congratulations #{champ}!"
