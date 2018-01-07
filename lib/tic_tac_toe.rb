@@ -121,13 +121,13 @@ class TicTacToe
       turn
     end 
     
-      if won?
-        champ = winner
-        puts "Congratulations #{champ}!"
-      elsif draw?
-        puts "Cat's Game!"
-      end 
+    if won?
+      champ = winner
+      puts "Congratulations #{champ}!"
+    elsif draw?
+      puts "Cat's Game!"
     end 
+    
   end
   
 end 
