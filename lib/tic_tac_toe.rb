@@ -50,9 +50,3 @@ class TicTacToe
       turn(board)
     end
   end
-  
-  
-  
-  
-  
-  
