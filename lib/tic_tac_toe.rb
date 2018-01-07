@@ -50,14 +50,14 @@ class TicTacToe
     end
   end
   
-  def turn_count(board)
-    turn = 0 
-    board.each do |cell|
+  def turn_count
+    counter = 0 
+    @board.each do |cell|
       if cell == "X" || cell == "O"
-        turn += 1
+        counter += 1
       end 
     end
-    turn 
+    counter 
   end 
 
   def current_player(board)
