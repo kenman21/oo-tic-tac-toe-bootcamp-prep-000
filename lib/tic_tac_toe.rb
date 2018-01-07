@@ -60,27 +60,27 @@ class TicTacToe
     counter 
   end 
 
-  def current_player(board)
-    if turn_count(board) % 2 == 0 
+  def current_player
+    if turn_count % 2 == 0 
       "X"
     else
       "O"
     end 
   end 
   
-  def won?(board)
+  def won?
     WIN_COMBINATIONS.each do |wincombo|
-      if board[wincombo[0]] == "X" && board[wincombo[1]] == "X" && board[wincombo[2]] == "X"
+      if @board[wincombo[0]] == "X" && @board[wincombo[1]] == "X" && @board[wincombo[2]] == "X"
         return wincombo
-      elsif board[wincombo[0]] == "O" && board[wincombo[1]] == "O" && board[wincombo[2]] == "O"
+      elsif @board[wincombo[0]] == "O" && @board[wincombo[1]] == "O" && @board[wincombo[2]] == "O"
         return wincombo
       end 
     end
     return nil
   end 
 
-  def full?(board)
-    board.each do |value|
+  def full?
+    @board.each do |value|
       if value == " "
         return false
       end 
@@ -88,8 +88,8 @@ class TicTacToe
     return true
   end 
 
-  def draw?(board)
-    if won?(board)
+  def draw?
+    if won?
       return false
     elsif full?(board)
       return true
