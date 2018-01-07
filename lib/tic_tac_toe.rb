@@ -118,10 +118,11 @@ class TicTacToe
   
   def play
     if won?
-        champ = winner
-        puts "Congratulations #{champ}!"
-      elsif draw?
-        puts "Cat's Game!"
+      champ = winner
+      puts "Congratulations #{champ}!"
+    elsif draw?
+      puts "Cat's Game!"
+    end 
     while over? == false
       turn
       if won?
