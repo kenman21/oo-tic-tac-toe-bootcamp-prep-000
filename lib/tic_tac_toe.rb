@@ -26,12 +26,12 @@ class TicTacToe
     @user_input = user_input.to_i - 1
   end
   
-  def move
-    @board[@index] = @current_player
+  def move(@user_input, token = "X")
+    @board[token] = @current_player
   end
   
-  def position_taken?(board, location)
-    board[location] != " " && board[location] != ""
+  def position_taken?
+    @board[@user_input] != " " && @board[@user_input] != ""
   end
   
   def valid_move?(board, index)
