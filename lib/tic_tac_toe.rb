@@ -120,8 +120,7 @@ class TicTacToe
     while over? == false
       turn
       if won?
-        champ = winner
-        puts "Congratulations #{champ}!"
+        puts "Congratulations #{@champ}!"
       elsif draw?
         puts "Cat's Game!"
       end 
