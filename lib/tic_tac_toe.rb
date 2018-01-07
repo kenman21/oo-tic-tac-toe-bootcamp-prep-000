@@ -116,3 +116,14 @@ class TicTacToe
       return nil
     end
   end  
+  
+  def play(board)
+    while over?(board) == false
+      turn(board)
+      if won?(board)
+        puts "Congratulations!"
+      elsif draw?(board)
+        puts "The game is a draw"
+      end 
+    end 
+end
