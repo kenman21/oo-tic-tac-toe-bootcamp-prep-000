@@ -89,30 +89,30 @@ class TicTacToe
     return true
   end 
 
-def draw?(board)
-  if won?(board)
-    return false
-  elsif full?(board)
-    return true
-  else 
-    return false
+  def draw?(board)
+    if won?(board)
+      return false
+    elsif full?(board)
+      return true
+    else 
+      return false
+    end 
   end 
-end 
 
-def over?(board)
-  if draw?(board)
-    return true
-  elsif won?(board)
-    return true
-  else 
-    false
-  end 
-end
-      
-def winner(board)
-  if won?(board)
-    return board[won?(board)[0]]
-  else
-    return nil
+  def over?(board)
+    if draw?(board)
+      return true
+    elsif won?(board)
+      return true
+    else 
+      false
+    end 
   end
-end  
+      
+  def winner(board)
+    if won?(board)
+      return board[won?(board)[0]]
+    else
+      return nil
+    end
+  end  
