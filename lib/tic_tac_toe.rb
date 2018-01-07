@@ -110,7 +110,6 @@ class TicTacToe
       
   def winner
     if won?
-      @board[won?[0]]
       return @board[won?[0]]
     else
       return nil
@@ -121,7 +120,8 @@ class TicTacToe
     while over? == false
       turn
       if won?
-        puts "Congratulations #{@champ}!"
+        champ = winner
+        puts "Congratulations #{champ}!"
       elsif draw?
         puts "Cat's Game!"
       end 
